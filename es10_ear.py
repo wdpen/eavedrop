@@ -28,7 +28,7 @@ class eavesdrop(VNICDumpProtocol):
 
 if __name__=='__main__':
 	loop=asyncio.get_event_loop()
-	loop.run_until_complete(playground.connect.raw_vnic_connection(eavesdrop()))
+	loop.run_until_complete(playground.connect.raw_vnic_connection(eavesdrop)
 	try:
 		loop.run_forever()
 	except KeyboardInterrupt:
