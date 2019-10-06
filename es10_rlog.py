@@ -1,7 +1,7 @@
 import os
 
 if __name__=='__main__':
-	dic={}
+	dicc={}
 	fwr=open('/home/student_20194/jack/alllog.txt','w')
 	path='/home/student_20194/log'
 	files=os.listdir(path)
@@ -18,16 +18,16 @@ if __name__=='__main__':
 			if (num==3):
 				a.append(str(line))
 				break
-		if (a[0] in dic) and (dic(a[0])==a[1]):
+		if (a[0] in dicc) and (dicc[a[0]]==a[1]):
 			continue
-		if (a[0] in dic) and (dic(a[0])!=a[1]):
+		if (a[0] in dicc) and (dicc[a[0]]!=a[1]):
 			fwr.write(a[0])
 			fwr.write('\t')
 			fwr.write(a[1])
 			fwr.write('\n')
 			continue
-		if not (a[0] in dic):
-			dic[a[0]]=a[1]
+		if not (a[0] in dicc):
+			dicc[a[0]]=a[1]
 			fwr.write(a[0])
 			fwr.write('\t')
 			fwr.write(a[1])
