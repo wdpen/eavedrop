@@ -14,9 +14,9 @@ if __name__=='__main__':
 			line=line.strip()
 			num+=1
 			if (num==2):
-				a.append(str(line))
+				a.append(line)
 			if (num==3):
-				a.append(str(line))
+				a.append(line)
 				break
 		if (a[0] in dicc) and (dicc[a[0]]==a[1]):
 			print('hello')
