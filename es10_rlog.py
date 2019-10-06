@@ -2,11 +2,11 @@ import os
 
 if __name__=='__main__':
 	dic={}
-	fwr=open('/home/jack/alllog.txt','w')
-	path='/home/log'
+	fwr=open('~/home/jack/alllog.txt','w')
+	path='~/home/log'
 	files=os.listdir(path)
 	for file in files:
-		ff=os.path.join('/home/log',file)
+		ff=os.path.join('~/home/log',file)
 		f=open(ff,'r')
 		num=0
 		a=[]
