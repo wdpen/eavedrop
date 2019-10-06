@@ -18,20 +18,10 @@ if __name__=='__main__':
 			if (num==3):
 				a.append(line)
 				break
-		if (a[0] in dicc) and (dicc[a[0]]==a[1]):
-			print('hello')
-			continue
-		if (a[0] in dicc) and (dicc[a[0]]!=a[1]):
-			fwr.write(a[0])
-			fwr.write('\t')
-			fwr.write(a[1])
-			fwr.write('\n')
-			continue
-		if not (a[0] in dicc):
-			dicc[a[0]]=a[1]
-			fwr.write(a[0])
-			fwr.write('\t')
-			fwr.write(a[1])
-			fwr.write('\n')			
+		dicc[a[0]]=a[1]
+		fwr.write(a[0])
+		fwr.write('\t')
+		fwr.write(a[1])
+		fwr.write('\n')			
 		f.close()
 	fwr.close()
