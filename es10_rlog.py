@@ -19,6 +19,7 @@ if __name__=='__main__':
 				a.append(str(line))
 				break
 		if (a[0] in dicc) and (dicc[a[0]]==a[1]):
+			print('hello')
 			continue
 		if (a[0] in dicc) and (dicc[a[0]]!=a[1]):
 			fwr.write(a[0])
