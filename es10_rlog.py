@@ -1,4 +1,4 @@
-import os
+import os, sys
 
 if __name__=='__main__':
 	if ('1' in sys.argv[1:]):
@@ -26,10 +26,12 @@ if __name__=='__main__':
 			fwr.write('\n')			
 			f.close()
 		fwr.close()
-	if ('2' in sys.argv[1:]):
+	elif ('2' in sys.argv[1:]):
 		gett=input('name to get password: ')
 		fwr=open('logdata.txt','w')
 		for line in fwr.readlines:
 			if line[0]==gett:
 				print(line[1])
 		fwr.close()
+	else:
+		print('Need input 1 or 2')
