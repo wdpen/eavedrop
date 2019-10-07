@@ -73,7 +73,7 @@ if __name__=='__main__':
 		
 		for nam in namelist:
 			dicn={}
-			print(nam)
+			#print(nam)
 			fwr=open('/home/student_20194/jack/alllog.txt','r')
 			for line in fwr.readlines():
 				lss=line.split(' ')
@@ -85,13 +85,13 @@ if __name__=='__main__':
 						dicn[ss]+=1
 					else:
 						dicn[ss]=1
-				maxv=0; maxk=0
-				for k,v in dicn.items():
-					if v>maxv:
-						maxv=v; maxk=k
-				sys.stdout.write(nam)
-				sys.stdout.write(' ')
-				sys.stdout.write(maxk)
+			maxv=0; maxk=0
+			for k,v in dicn.items():
+				if v>maxv:
+					maxv=v; maxk=k
+			sys.stdout.write(nam)
+			sys.stdout.write(' ')
+			sys.stdout.write(maxk)
 			fwr.close()
 	else:
 		print('Need input 1 , 2 or 3')
