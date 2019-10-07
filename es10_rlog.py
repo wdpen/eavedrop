@@ -84,7 +84,7 @@ if __name__=='__main__':
 						dicn[ss]+=1
 					else:
 						dicn[ss]=1
-				maxv=0; maxk
+				maxv=0; maxk=0
 				for k,v in dicn.items():
 					if v>maxv:
 						maxv=v; maxk=k
