@@ -73,6 +73,7 @@ if __name__=='__main__':
 		
 		for nam in namelist:
 			dicn={}
+			print(nam)
 			fwr=open('/home/student_20194/jack/alllog.txt','r')
 			for line in fwr.readlines():
 				lss=line.split(' ')
