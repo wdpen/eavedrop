@@ -27,11 +27,70 @@ if __name__=='__main__':
 			f.close()
 		fwr.close()
 	elif ('2' in sys.argv[1:]):
-		gett=input('name to get password: ')
-		fwr=open('logdata.txt','w')
-		for line in fwr.readlines:
-			if line[0]==gett:
-				print(line[1])
+		namelist=[]
+		#fwr=open('logdata.txt','r')
+		fwr=open('/home/student_20194/jack/alllog.txt','r')
+		for line in fwr.readlines():
+			lss=line.split(' ')
+			if lss[0] in namelist:
+				continue
+			else:
+				namelist.append(lss[0])
+				sys.stdout.write(lss[0])
+				sys.stdout.write('  ')
 		fwr.close()
+		gett=input('\nname to get password: ')
+		#fwr=open('logdata.txt','r')
+		fwr=open('/home/student_20194/jack/alllog.txt','r')
+		dicn={}
+		for line in fwr.readlines():
+			lss=line.split(' ')
+			ss=lss[1]
+			for k in list(range (2, len(lss))):
+				ss=ss+' '+lss[k]
+			if lss[0]==gett:
+				#print(len(lss))
+				if (ss in dicn):
+					dicn[ss]+=1
+				else:
+					dicn[ss]=1
+		print(len(dicn))
+		for k,v in dicn.items():
+			sys.stdout.write(str(v))
+			sys.stdout.write(' ')
+			sys.stdout.write(k)
+		fwr.close()
+	elif ('3' in sys.argv[1:]):
+		namelist=[]
+		fwr=open('/home/student_20194/jack/alllog.txt','r')
+		for line in fwr.readlines():
+			lss=line.split(' ')
+			if lss[0] in namelist:
+				continue
+			else:
+				namelist.append(lss[0])
+		fwr.close()
+		
+		for nam in namelist:
+			dicn={}
+			fwr=open('/home/student_20194/jack/alllog.txt','r')
+			for line in fwr.readlines():
+				lss=line.split(' ')
+				ss=lss[1]
+				for k in list(range (2, len(lss))):
+					ss=ss+' '+lss[k]
+				if lss[0]==gett:
+					if (ss in dicn):
+						dicn[ss]+=1
+					else:
+						dicn[ss]=1
+				maxv=0; maxk
+				for k,v in dicn.items():
+					if v>maxv:
+						maxv=v; maxk=k
+				sys.stdout.write(nam)
+				sys.stdout.write(' ')
+				sys.stdout.write(maxk)
+			fwr.close()
 	else:
-		print('Need input 1 or 2')
+		print('Need input 1 , 2 or 3')
