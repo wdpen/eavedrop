@@ -79,7 +79,7 @@ if __name__=='__main__':
 				ss=lss[1]
 				for k in list(range (2, len(lss))):
 					ss=ss+' '+lss[k]
-				if lss[0]==gett:
+				if lss[0]==nam:
 					if (ss in dicn):
 						dicn[ss]+=1
 					else:
